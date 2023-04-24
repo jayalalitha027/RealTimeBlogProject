@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--<link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" />-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+    <script src="{% static 'js/bootstrap.bundle.js' %}">
+    </script>
+
+    <script>
+        const collapseElementList = document.querySelectorAll('.collapse')
+        const collapseList = [...collapseElementList].map(collapseEl => new bootstrap.Collapse(collapseEl))
+    </script>
+    <script>
+        function f1()
+        {
+            console.log("You clicked me!!")
+            window.alert("Hey user!!")
+            var a = document.getElementById("num1").value
+            var b = document.getElementById("num2").value
+            sum = parseInt(a)+parseInt(b)
+            window.alert()
+            document.getElementById("sp1").textContent=sum
+        }
+        function f2() {
+            console.log("You clicked me!!")
+            window.alert("Hey user!!")
+            var a = document.getElementById("num1").value
+            var b = document.getElementById("num2").value
+            sub = parseInt(a) - parseInt(b)
+            window.alert()
+            document.getElementById("sp2").textContent = sub
+        }
+        function f3() {
+            console.log("You clicked me!!")
+            window.alert("Hey user!!")
+            var a = document.getElementById("num1").value
+            var b = document.getElementById("num2").value
+            Mul = parseInt(a) * parseInt(b)
+            window.alert()
+            document.getElementById("sp3").textContent=Mul
+        }
+        function f4() {
+            var a = document.getElementById("num1").value
+            var b = document.getElementById("num2").value
+            Div = parseInt(a) / parseInt(b)
+            document.getElementById("sp4").textContent=Div
+        }
+    </script>
+
+</head>
+<body style="background-color: lightpink">
+    <h1 style="color:blue">Welcome to Python Fullstack</h1>
+    <hr />
+    <h2 style="color:green">Have a nice day</h2>
+    <h3 style="color:maroon">****ALL THE BEST****</h3>
+    <hr />
+
+    <button type="button" class="btn btn-primary btn-lg">Primary</button>
+    <button type="button" class="btn btn-secondary">Secondary</button>
+    <button type="button" class="btn btn-success">Success</button>
+    <button type="button" class="btn btn-danger">Danger</button>
+    <button type="button" class="btn btn-warning">Warning</button>
+    <button type="button" class="btn btn-info">Info</button>
+    <button type="button" class="btn btn-light">Light</button>
+    <button type="button" class="btn btn-dark">Dark</button>
+    <button type="button" class="btn btn-link">Link</button>
+    <hr />
+
+    <p>
+      <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample">
+        PYTHON
+      </a>
+    </p>
+    <div class="collapse" id="collapseExample1">
+      <div class="card card-body" style="background-color:darkgray;color:darkred;font-size:20px">
+           Course duration: 90days <br />
+           price:12000 <br />
+           Syllabus:Core python,Adv python,Ui-Tech,Databases <br />
+           Trainer:Sai sir <br />
+      </div>
+    </div>
+
+    <p>
+      <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample">
+        DJANGO
+      </a>
+    </p>
+    <div class="collapse" id="collapseExample2">
+      <div class="card card-body" style="background-color:lawngreen;color:blue;font-size:20px">
+           Course duration: 45days <br />
+           price:6000 <br />
+           Syllabus:PycharmProjects,Bootstrap,Javascript,Css,Html <br />
+          Trainer:Sai sir <br />
+      </div>
+    </div>
+    <hr />
+    <script>
+    var a=11
+    var b=3
+    document.writeln("<h3>")
+    document.writeln("Sum ::: "+(a+b)+"<br />")
+    document.writeln("Sub ::: "+(a-b)+"<br />")
+    document.writeln("prod ::: "+(a*b)+"<br />")
+    document.writeln("Div ::: "+(a/b)+"<br />")
+    document.writeln("Mod ::: "+(a%b)+"<br />")
+    document.writeln("</h3>")
+    </script>
+    <hr />
+    <h4>
+    <label>A value : </label> <input type="number" id="num1" />
+    <label>B value : </label> <input type="number" id="num2" />
+    <br />
+    <button type="button" class="btn btn-lg btn-danger"  onclick="f1()">Sum</button>
+    <button type="button" class="btn btn-lg btn-success" onclick="f2()">sub</button>
+    <button type="button" class="btn btn-lg btn-secondary" onclick="f3()">Mul</button>
+    <button type="button" class="btn btn-lg btn-info" onclick="f4()">Div</button>
+    <br />
+    Your Result(Addition) ::: <span id="sp1"></span>  <br />
+    Your Result(Substraction) ::: <span id="sp2"></span> <br />
+    Your Result(Multiplication) ::: <span id="sp3"></span> <br />
+    Your Result(Div) ::: <span id="sp4"></span>
+    </h4>
+    <hr />
+</body>
+</html>
